@@ -33,8 +33,8 @@ urlpatterns = [
     path('eshop/',include('eshop.urls')),
     path('paypal/', include('paypal.standard.ipn.urls')),
     path('accounts/', include('allauth.urls')),
-    # url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 
 
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
