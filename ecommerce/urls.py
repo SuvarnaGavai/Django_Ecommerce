@@ -24,6 +24,7 @@ from django.urls import path,re_path
 
 from django.views.static import serve
 from django.conf.urls import url
+
 from django.conf import settings
 
 urlpatterns = [
