@@ -11,9 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
-import dj_database_url
-
 from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,9 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1&av!ce@d-o@e+&n7pn!g_7m0-m%f0k_lvud@v$nu!ffk2(&1p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ENV_TYPE = os.environ.get('ENV_TYPE')
-if ENV_TYPE == "HEROKU":
-    DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','ecommapp.herokuapp.com']
 
@@ -163,9 +158,12 @@ SITE_ID = 4
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-django_heroku.settings(locals())
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ] 
+# STATIC_ROOT = 'rootstatic/'
+STATIC_ROOT = os.path.join(BASE_DIR,)
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
