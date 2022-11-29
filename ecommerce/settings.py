@@ -159,10 +159,11 @@ SITE_ID = 4
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-] 
-STATIC_ROOT = 'rootstatic/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ] 
+# STATIC_ROOT = 'rootstatic/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
