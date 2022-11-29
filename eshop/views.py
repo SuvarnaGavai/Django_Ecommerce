@@ -112,7 +112,7 @@ def eshop(request):
             item_list = request.session['items']
             itemCount = len(item_list)
             print(item_list)
-    return render(request, 'index1.html',{'products':products,'cartItemCount':itemCount,'is_login':False,'banners':banners,'cms':cms,'mobile':mobile,'email':email})
+    return render(request, 'index.html',{'products':products,'cartItemCount':itemCount,'is_login':False,'banners':banners,'cms':cms,'mobile':mobile,'email':email})
 
 def addcontactus(request):
     if request.method == "POST":
